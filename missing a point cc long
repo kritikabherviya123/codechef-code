@@ -1,0 +1,27 @@
+#missing a point(long challange)
+for u in range(int(input())):
+    n = int(input())
+    lst_x = {}
+    lst_y = {}
+    a = 4 * n-1
+    for v in range(a):
+        x,y = map(int,input().split())
+        if x not in lst_x:
+            lst_x[x] = 1
+        else:
+            lst_x[x] += 1
+        if y not in lst_y:
+            lst_y[y] = 1
+        else:
+            lst_y[y] += 1
+#     freq_x = CountFrequency(lst_x)
+#     freq_y = CountFrequency(lst_y)
+    for key, value in lst_x.items(): 
+        if value % 2 != 0:
+            p1 = key
+            break
+    for key, value in lst_y.items(): 
+        if value % 2 != 0:
+            p2 = key
+            break
+    print(p1,p2)
